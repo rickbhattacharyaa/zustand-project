@@ -46,9 +46,9 @@ export default function UserList({ onEditUser, onViewUser}) {
             {/* Actions */}
             <div className="flex gap-2">
              <button
-                    onClick={(e) => {
-                        e.stopPropagation();
-                        onEditUser(user);
+                onClick={(e) => {
+                    e.stopPropagation();
+                    onEditUser(user);
                     }}
                 className="bg-yellow-400 px-2 py-1 rounded"
                 >
