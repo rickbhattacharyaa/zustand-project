@@ -59,6 +59,7 @@ function UserForm({selectedUser, clearSelection}) {
   if (selectedUser) {
     
     await updateUser(selectedUser.id, { name, email });
+    clearSelection()
   } else {
     
     await createUser({ name, email });
@@ -68,6 +69,7 @@ function UserForm({selectedUser, clearSelection}) {
       setName("");
       setEmail("");
       setErrors({});
+     
     }
   };
 

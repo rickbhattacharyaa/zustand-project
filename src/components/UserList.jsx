@@ -43,7 +43,7 @@ export default function UserList({ onEditUser, onViewUser}) {
               <p className="text-sm text-gray-600">{user.email}</p>
             </div>
 
-            {/* Actions */}
+            
             <div className="flex gap-2">
              <button
                 onClick={(e) => {

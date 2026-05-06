@@ -15,9 +15,7 @@ function errorResponse(message, status = 500) {
     { status }
   );
 }
-async function getParams(params) {
-  return typeof params?.then === "function" ? await params : params;
-}
+
 
 export async function GET(_req,context) {
   try {

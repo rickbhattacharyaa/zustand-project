@@ -37,50 +37,6 @@ export const useUserStore = create()(
       error: null,
 
   
-      setUsers: (users) =>
-        set(
-          (state) => {
-            state.users = users;
-          },
-          false,
-          "users/setUsers"
-        ),
-
-      addUser: (user) =>
-        set(
-          (state) => {
-            state.users.push(user);
-          },
-          false,
-          "users/addUser"
-        ),
-
-      updateUserInStore: (user) =>
-        set(
-          (state) => {
-            const index = state.users.findIndex(
-              (u) => u.id === user.id
-            );
-            if (index !== -1) {
-              state.users[index] = user;
-            }
-          },
-          false,
-          "users/updateUser"
-        ),
-
-      removeUserFromStore: (id) =>
-        set(
-          (state) => {
-            state.users = state.users.filter(
-              (u) => u.id !== id
-            );
-          },
-          false,
-          "users/removeUser"
-        ),
-
-  
 
       fetchUsers: async () => {
         set(
